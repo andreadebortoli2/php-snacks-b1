@@ -27,4 +27,5 @@ foreach ($matches as $key => $value) {
     $ospite = $matches[$key]['ospite'];
     $risultato = $matches[$key]['risultato'];
     echo "$casa - $ospite | $risultato";
+    echo '<br>';
 }
