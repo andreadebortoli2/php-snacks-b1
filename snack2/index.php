@@ -6,14 +6,14 @@ Con un form passare come parametri GET name, mail e age e verificare (cercando i
 $name = $_GET['name'];
 $email = $_GET['email'];
 $age = $_GET['age'];
-var_dump($name . $email . $age);
-var_dump(str_contains($email, '@'));
+/* var_dump($name . $email . $age);
+var_dump(str_contains($email, '@')); */
 
-if (strlen($name) > 3 && str_contains($email, '@') && str_contains($email, '.') && is_numeric($age)) {
+/* if (strlen($name) > 3 && str_contains($email, '@') && str_contains($email, '.') && is_numeric($age)) {
     echo 'ok';
 } else {
     echo 'no';
-}
+} */
 
 ?>
 
@@ -35,6 +35,13 @@ if (strlen($name) > 3 && str_contains($email, '@') && str_contains($email, '.') 
         <button type="submit">Click</button>
     </form>
 
+    <div>
+        <?php if (strlen($name) > 3 && str_contains($email, '@') && str_contains($email, '.') && is_numeric($age)) {
+            echo 'Accesso riuscito';
+        } else {
+            echo 'Accesso negato';
+        } ?>
+    </div>
 </body>
 
 </html>
